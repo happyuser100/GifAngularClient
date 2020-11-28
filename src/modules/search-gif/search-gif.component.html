@@ -1,0 +1,17 @@
+<h1>Search Gifs</h1>
+<div class="container">
+  <input
+    type="text"
+    [value]="searchString"
+    class="searchText"
+    placeholder="Please Enter search string"
+    (input)="searchString = $event.target.value"
+  />
+
+  <button type="button" (click)="searchClick()">Search</button>
+</div>
+
+<div *ngFor="let data of searchGifs; let i = index">
+  <h4>{{ data.title }}</h4>
+  <img src="{{ data.images.original.url }}" />
+</div>

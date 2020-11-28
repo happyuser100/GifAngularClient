@@ -1,0 +1,6 @@
+<h1>Trending Gifs</h1>
+
+<div *ngFor='let data of trends; let i=index;'>
+    <h4> {{data.title}} </h4>    
+    <img src='{{data.images.original.url}}' />
+</div>   
